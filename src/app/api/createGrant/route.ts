@@ -7,7 +7,7 @@ export async function POST(req) {
         process.env.SUPABASE_KEY
       )
     const data = await req.json()
-    const result = await supabase.from("Notes").insert([data])
+    const result = await supabase.from("Grants").insert([data])
     console.log(result)
     return Response.json({ message: "This Worked", success: true });
 }

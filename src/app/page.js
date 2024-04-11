@@ -1,5 +1,5 @@
 
-import { Notes } from "./components/Notes"
+import { Grants } from "./components/Grants"
 import { createClient } from "@supabase/supabase-js"
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -10,13 +10,13 @@ export const revalidate = 0
 export default async function Home() {
 
   const {data, error} = await supabase
-    .from("Notes").select()
+    .from("Grants").select()
 
   console.log('Notes', data)
 
   return (
     <main className="flex flex-col items-center p-24">
-        <Notes data={data}/>
+        <Grants data={data}/>
     </main>
   )
 }
