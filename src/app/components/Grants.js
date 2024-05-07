@@ -83,11 +83,12 @@ const NewGrantModal = ({ isOpen, onClose }) => {
               ))}
             </select>
           </div>
+          <label className="block text-sm font-semibold mb-2">Vesting Start Date:</label>
           <DatePicker
             value={vestingStartDate}
             onChange={setVestingStartDate}
           />
-          <div className="mb-4">
+          <div className="mb-4 mt-4">
             <label className="block text-sm font-semibold mb-2">Price Per Share: ${price}</label>
             <input 
               type="range" 
